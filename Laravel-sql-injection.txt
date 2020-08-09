@@ -1,0 +1,10 @@
+
+Eloquent use the PDO driver in core so SQL Injections are taken care of.
+Additionally, Laravel give the option to build parameterized queries.
+
+For eg.
+$results = DB::select('select * from users where id = :id', ['id' => 1]);
+
+DB::insert('insert into users (id, name) values (?, ?)', [1, 'Dayle']);
+
+$affected = DB::update('update users set votes = 100 where name = ?', ['John']);
