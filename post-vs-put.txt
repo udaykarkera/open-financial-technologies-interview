@@ -1,0 +1,11 @@
+URL:
+    POST        /openmoney/users        Create a new users
+    PUT         /openmoney/users/1      Update the user information identified by "id"
+
+Practise:
+    POST        Always use POST for CREATE operations.
+    PUT         Always use PUT for UPDATE operations.
+
+Idempotent
+    POST        NOT idempotent      If you request N times, N number of resources will be created
+    PUT         Is idempotent       If you request N times, that should be equivalent to single resource modification.
